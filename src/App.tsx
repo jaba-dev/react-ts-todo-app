@@ -4,8 +4,6 @@ import useLocalStorage from "./hooks/useLocalstorage";
 import { TodoProp } from "./components/TodoForm";
 import TodoItems from "./components/TodoItems";
 
- 
-
 function App() {
  const [todos, setTodos] = useLocalStorage<TodoProp[]>('todos', []);
 
