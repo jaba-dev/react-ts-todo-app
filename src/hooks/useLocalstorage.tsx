@@ -1,4 +1,4 @@
-import { useState, useEffect, Dispatch, SetStateAction } from 'react';
+import { useState,  Dispatch, SetStateAction } from 'react';
 
 // Define the type for the value you want to store in local storage
 type LocalStorageValue<T> = T | (() => T);
