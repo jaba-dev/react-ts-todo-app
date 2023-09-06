@@ -1,0 +1,7 @@
+@mixin inputStyles() {
+  padding: 10px;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}

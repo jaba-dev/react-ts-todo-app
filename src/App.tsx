@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import TodoForm from './components/TodoForm';
+import useLocalStorage from "./hooks/useLocalstorage";
+import { TodoProp } from "./components/TodoForm";
+import TodoItems from "./components/TodoItems";
+
+ 
 
 function App() {
+ const [todos, setTodos] = useLocalStorage<TodoProp[]>('todos', []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="todo-container">
+     <h1>Todo App</h1>
+     <TodoForm todos={todos} setTodos={setTodos} />
+     <TodoItems todos={todos} setTodos={setTodos}/>
     </div>
   );
 }

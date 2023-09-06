@@ -1,0 +1,21 @@
+@import "../styles/buttons.scss";
+@import "../styles/inputs.scss";
+
+.todo-form {
+  display: flex;
+  height: 50px;
+  input {
+    width: calc(100% - 50px);
+    @include inputStyles;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    @include buttonStyles;
+    svg {
+      color: blue;
+    }
+  }
+}

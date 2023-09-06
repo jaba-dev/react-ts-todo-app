@@ -1,0 +1,57 @@
+@import "../styles/buttons.scss";
+
+.completed {
+  .todo-text::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    background-color: green;
+  }
+}
+
+.todo-info {
+  display: flex;
+  justify-content: space-between;
+  .todo-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    position: relative;
+    h2 {
+      color: #fff;
+      padding: 5px;
+    }
+    p {
+      padding: 5px;
+    }
+    @media screen and (max-width: 420px) {
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  .todo-actions {
+    display: flex;
+    button {
+      @include buttonStyles;
+      padding: 10px 20px;
+    }
+    @media screen and (max-width: 420px) {
+      button {
+        padding: 4px 8px;
+      }
+    }
+    @media screen and (max-width: 340px) {
+      button {
+        padding: 0;
+      }
+    }
+  }
+}
